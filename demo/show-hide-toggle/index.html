@@ -2,6 +2,20 @@
 <html>
 	<head>
 		<title> <!-- insert title here --> - My Awesome Project</title> 
+				<!--include jQuery Library --> 
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+		<script>
+
+			$('document').ready(function(){
+				
+				$(".delete").click(function(){
+					$(this).parent("tr").hide();
+
+				});
+				
+			});
+		</script>
 		<style type="text/css">
 			/* Our Epic Styles goes here */ 
 			body{
@@ -14,11 +28,30 @@
 				background-color: #fff;
 			}
 
+
 		</style>
 	</head>
 	<body>
 		<div id="container">
 			<!-- Anything goes when we ride, even when my little shorty's by my side. -->
+
+			<table id="table1" border=1>
+				<tr>
+					<td>Cell 1</td>
+					<td>cell 2</td>
+					<td><a href="" class="delete">Delete</a></td>
+				</tr>
+				<tr>
+					<td>Cell 1</td>
+					<td>cell 2</td>
+					<td>Delete</td>
+				</tr>
+				<tr>
+					<td>Cell 1</td>
+					<td>cell 2</td>
+					<td>Delete</td>
+				</tr>
+			</table>
 		</div>
 	</body>
 </html>

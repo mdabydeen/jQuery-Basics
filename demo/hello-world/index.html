@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> <!-- insert title here --> - My Awesome Project</title> 
+		<title> Basics - My Awesome Project</title> 
+		<!--include jQuery Library --> 
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+		<script>
+
+			$('document').ready(function(){
+
+				//anything here will be executed 
+				$("button").click(/*do something here*/function(){
+					$("p").html("Some text was entered");
+				});
+			});
+		</script>
 		<style type="text/css">
 			/* Our Epic Styles goes here */ 
 			body{
@@ -18,7 +31,9 @@
 	</head>
 	<body>
 		<div id="container">
-			<!-- Anything goes when we ride, even when my little shorty's by my side. -->
+			<p></p>
+			<button>Click me</button>
+			<button>Button 2</button>
 		</div>
 	</body>
 </html>
