@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title> <!-- insert title here --> - My Awesome Project</title> 
+		<title> inline edit - My Awesome Project</title> 
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+		    $('document').ready(function(){
+		    	$("#text").bind('dblclick',function(){
+		    		//grab the text in the element
+		    		var textvalue = $("#text").text(); // no value returned
+
+		    		//console.log(textvalue);
+
+		    		//change the p to input field
+		    		$('#text').empty(); //empty 
+		    		$('#text').html("<input type='text' value='"+textvalue+"' id=\"newvalue\" size=\"25\" />");
+		    		//allow the user to change the text
+
+		    		//grab the new text that they entered
+		    		newvalue = $("#newvalue").val();
+
+		    		//TODO: Pass the value to the new function
+		    		//then update the html to the new value
+		    	
+		    	});
+
+
+
+		    });
+		</script>
 		<style type="text/css">
 			/* Our Epic Styles goes here */ 
 			body{
@@ -18,7 +44,8 @@
 	</head>
 	<body>
 		<div id="container">
-			<!-- Anything goes when we ride, even when my little shorty's by my side. -->
+
+			<p id="text">My Name is chicka chicka slim shady</p>
 		</div>
 	</body>
 </html>
