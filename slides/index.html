@@ -27,10 +27,7 @@
 
 	<body>
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-
 				<section>
 					<h1>Introduction to</h1>
 					<h3>jQuery</h3>
@@ -142,28 +139,22 @@
 							<li class="fragment">Simple syntax</li>
 							<li class="fragment">Awesome</li>
 					</ul>
-
 				</section>
-
 				<section>
 							<h2>Focus of jQuery</h2>
-
 						<ol>
 							<li>Find some element</li>
 							<li>Do something with them</li>
 						</ol>
-
 						<section data-markdown>
 							<script type="text/template">
 							`$("Element").doSomething("special");`
 							</script>
 						</section>
 				</section>
-
 				<section>
 							<h2>Understanding the jQuery Object </h2>
 							<p>$("div").addClass("special");</p>
-
 						<ol>
 							<li class="fragment">$ - is the jQuery Object (also name jQuery)</li>
 							<li class="fragment">"div" - the name of an element using CSS selector</li>
@@ -171,9 +162,7 @@
 							<li class="fragment">addClass() - modifier method for the element</li>
 							<li class="fragment">"special" - can be anything that executes as a result of the element being modified</li>
 						</ol>
-						
 				</section>
-
 				<section>
 					<h2>Graceful Death</h2>
 					<p>$(".idontexist").addClass("special");</p>
@@ -187,7 +176,6 @@
 jQuery has a ready event that fires the instant the DOM is ready to be worked with.
 Stick all your jQuery code in a ready block, load it unobtrusively.</p>
 				</section>	
-
 				<section>
 					<h2>The Ready Event</h2>
 						<pre><code contenteditable>
@@ -237,14 +225,10 @@ $(document).ready(function(){
 						<li>jquery.com</li>
 						<li>learningjquery.com</li>
 				</section>
-
 			</div>
-
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
 		<script>
 			Reveal.initialize({
 				controls: true,
@@ -264,8 +248,6 @@ $(document).ready(function(){
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
-
 		</script>
-
 	</body>
 </html>
