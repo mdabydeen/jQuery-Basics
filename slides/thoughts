@@ -1,0 +1,99 @@
+Objective 
+	- Understanding the basic jQuery Library
+	- Getting your feet wet
+	- Getting pointed to resouces for further investigation
+
+Jquery 
+	Open Source
+	Used by Many (link)
+	Fully Documented
+	Great Community Support
+	Small Size (minifed)
+	Cross Browser Compatible
+	Written by John Resig * - (link)
+
+Who uses jQuery
+	Microsoft
+	Google
+	(insert name of big company here)
+		- AppendTO (the first jQuery company)
+	(insert trend number here)
+
+John Resig (ejohn.org)
+	currently the head of Computer Science for Khan Academy (link)
+	respected name in the JavaScript community
+	written a few books on JavaScript
+	built jQuery in 2005 while he was a 2nd yr student at RIT (Rochester Institute of Technology)
+	first released in 2006
+	presently nearing the release of version 2.0
+	with each major version still available online
+
+
+Why jQuery? 
+	Make DOM / HTML Document travesal easy
+	Makes Event Binding / Handling easier 
+	Better way to do advanced things like AJAX
+	Simplifies Cross Browser JavaScript Compatibilty 
+	Easy to learn and Master
+	Simple syntax
+	Awesome
+
+Focus of jQuery
+
+$("Element").doSomething("special");
+
+(1)Find some elements.
+(2)Do something with them.
+
+Understand the jQuery Object 
+
+$("div").addClass("special");
+
+$ - is the jQuery Object (also name jQuery)
+"div" - the name of an element using CSS selector
+
+$("div") - represents every div on the page
+
+addClass() - modifier method for the element
+
+"special" - can be anything that executes as a result of the element being modified
+
+Gracefully dies
+
+$(".idontexist").addClass("special");
+
+will not break the code.
+
+The Ready Event
+
+$(document).ready(function(){ 
+    // Your jQuery code goes in here 
+});
+
+In order to traverse and manipulate the page we must wait until it's ready to be used.
+jQuery has a ready event that fires the instant the DOM is ready to be worked with.
+Stick all your jQuery code in a ready block, load it unobtrusively.
+
+Elements, Selectors, Attrbitues
+
+# - id rep
+. - class rep
+
+Credits 
+
+	- ejohn 
+	- greg 
+	- 
+
+Resources 
+	- learnjquery.org
+	- jquery.com
+	- learningjquery.com
+
+(plug) - Sunday Night Hangout
+
+Look at some practical examples
+
+	- Demo 
+		- Hello World
+		- show() / hide() / toggle()

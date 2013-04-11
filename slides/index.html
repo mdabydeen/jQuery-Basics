@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript on Steroids - An Introduction to jQuery</title>
+
+		<meta name="description" content="A basic introduction to jQuery using JavaScript">
+		<meta name="author" content="Michael Dabydeen">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Introduction to</h1>
+					<h3>jQuery</h3>
+					<p>
+						<small> by <a href="http://about.me/mikedabydeen" target="_blank">Michael Dabydeen</a> / <a href="http://twitter.com/firelinks" target="_blank">@firelinks</a></small>
+					</p>
+					<p><small>Slides are located at http://mdabydeen.github.com/intro-jquery/</small>
+				</section>
+
+				<section>
+					<h2>Requirement for this presentation</h2>
+					<ul>
+						<li>Working knowledge on the basics of 
+							<ul>
+								<li class="fragment">HTML</li>
+								<li class="fragment">CSS</li>
+								<li class="fragment">JavaScript</li>
+								<li class="fragment">Document Object Model (DOM)</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Reccommended (but not required)</h2>
+					<ul>
+						<li>Modern Web Browser with a Developer Tookit like
+							<ul>
+								<li><a href="http://www.google.com/chrome" target="_blank">Google Chrome</a> with <a href="http://trac.webkit.org/wiki/WebInspector" target="_blank">Web Inspector </a>(built in)</li>
+								<li><a href="http://http://www.mozilla.org/en-US/firefox/new/" target="_blank">Mozilla Firefox</a>with <a href="https://getfirebug.com/" target="_blank"> Firebug </a>(plugin)</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+						<h1>Objectives</h1>
+						<ol>		
+							<li>Understanding the basic jQuery Library</li>
+							<li>Getting your feet wet (live examples)</li>
+							<li>Getting pointed to resouces for further investigation</li>
+						</ol>
+						<img src="http://www.dolphinheartworld.com/images/dipyourtoes.jpg">
+				</section>	
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>What is jQuery</h2>
+						<img src="img/jquery-dawg.jpg">
+						<a href="#" class="image navigate-down">
+							<p>Press down or up to navigate.</p>
+						</a>
+					</section>
+					<section>
+						<h2>jQuery</h2>
+						<ul>
+							<li>A JavaScript Library that is
+								<ul>
+									<li class="fragment">Open Source(<a href="http://github.com/jquery/jquery" target="_blank">view source</a>)</li>
+									<li class="fragment">Used by Many (Google Trends, Builtwith.com) </li>
+									<li class="fragment">Fully Documented</li>
+									<li class="fragment">Great Community Support</li>
+									<li class="fragment">Small Size (minifed)</li>
+									<li class="fragment">Cross Browser Compatible</li>
+									<li class="fragment"><a href="#resig">Written by John Resig</a></li>
+								</ul>
+							</li>
+						<ul>
+					</section>
+					<section>
+						<h2>jQuery</h2>
+						<p>*Le Random Unicorn Appeared</p>
+						<a class="test" href="http://cornify.com">
+							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
+						</a>
+					</section>
+					<section>
+						<h2>Who uses jQuery</h2>
+							<ul>
+								<li>Microsoft</li>
+								<li>Google</li>
+								<li>(insert name of big company here)</li>
+								<li>Almost every other programming language/framework out there</li>
+						<ul>
+					</section>
+					<section id="resig">
+						<h2>John Resig <small>(<a href="http://www.ejohn.org" target="_blank">ejohn.org</a>)</small></h2>
+						<ul>
+							<li class="fragment">currently the head of Computer Science for <a href="http://www.khanacademy.com" target="_blank">Khan Academy</a></li>
+							<li class="fragment">Largely respected name in the JavaScript community</li>
+							<li class="fragment">Written a few books on JavaScript</li>
+							<li class="fragment">Built jQuery in 2005 while he was a 3rd year student at RIT (Rochester Institute of Technology)</li>
+							<li class="fragment">First released jQuery in 2006 while still in school</li>
+							<ul>
+								<li class="fragment">Note: Presently nearing the release of version 2.0</li>
+								<li class="fragment">Note: With each major version still available online</li>
+							</ul>
+					</section>
+				</section>
+
+				<section>
+						<h2>Why jQuery?</h2> 
+						<ul>
+							<li class="fragment">Make DOM / HTML Document travesal easy</li>
+							<li class="fragment">Makes Event Binding / Handling easier </li>
+							<li class="fragment">Better way to do advanced things like AJAX</li>
+							<li class="fragment">Simplifies Cross Browser JavaScript Compatibilty</li> 
+							<li class="fragment">Easy to learn and Master</li>
+							<li class="fragment">Simple syntax</li>
+							<li class="fragment">Awesome</li>
+					</ul>
+
+				</section>
+
+				<section>
+							<h2>Focus of jQuery</h2>
+
+						<ol>
+							<li>Find some element</li>
+							<li>Do something with them</li>
+						</ol>
+
+						<section data-markdown>
+							<script type="text/template">
+							`$("Element").doSomething("special");`
+							</script>
+						</section>
+				</section>
+
+				<section>
+							<h2>Understanding the jQuery Object </h2>
+							<p>$("div").addClass("special");</p>
+
+						<ol>
+							<li class="fragment">$ - is the jQuery Object (also name jQuery)</li>
+							<li class="fragment">"div" - the name of an element using CSS selector</li>
+							<li class="fragment">$("div") - represents every div on the page</li>
+							<li class="fragment">addClass() - modifier method for the element</li>
+							<li class="fragment">"special" - can be anything that executes as a result of the element being modified</li>
+						</ol>
+						
+				</section>
+
+				<section>
+					<h2>Graceful Death</h2>
+					<p>$(".idontexist").addClass("special");</p>
+					<p>
+							will not break the code.
+					</p>
+				</section>
+				<section>
+						<h2> Ready Catcher</h2>
+						<p>In order to traverse and manipulate the page we must wait until it's ready to be used.
+jQuery has a ready event that fires the instant the DOM is ready to be worked with.
+Stick all your jQuery code in a ready block, load it unobtrusively.</p>
+				</section>	
+
+				<section>
+					<h2>The Ready Event</h2>
+						<pre><code contenteditable>
+$(document).ready(function(){ 
+ // Your jQuery code goes in here 
+});
+					</code></pre>
+				</section>
+				<section>
+					<h2>Alternative - The Ready Event</h2>
+					<h5> Use of Anonymous self calling functions</h5></p>
+						<pre><code contenteditable>
+(function($){ 
+ // Your jQuery code goes in here
+})(jQuery);
+					</code></pre>
+				</section>
+				<section>
+						<h2>Elements, Selectors, Attrbitues<h2>
+							<h5>Same as CSS</h5>
+							<p>
+							# - id rep</p>
+							<p>. - class rep</p>
+				</section>
+				<section>
+					<h1>THE END</h1>
+					<h3>BY Michael Dabydeen / www.michaeldabydeen.com</h3>
+				</section>
+				<section>
+					<h2>Credits</h2>
+
+					<ul>
+						<li>John Resig (ejohn.org)</li>
+						<li>Greg Sidelnikov (learnjquery.com)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Sunday Night Hangout <small>(shameless plug)</small></h2>
+
+					<h4>Everyday Sunday night from 8pm - 10pm (or later) on Google +</h4>
+					<p>Links are posted on Facebook &amp; Twitter </p>
+				</section>
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li>learnjquery.org</li>
+						<li>jquery.com</li>
+						<li>learningjquery.com</li>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
